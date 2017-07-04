@@ -1,10 +1,11 @@
 mvn compile exec:java \
-      -Dexec.mainClass=com.google.ce.fukudak.AllRides -e \
-      -Dexec.args="--project=$PROJECT \
+      -Dexec.mainClass=com.google.ce.fukudak.PickupRides -e \
+      -Dexec.args="--project=$PRPOJECT \
       --sinkProject=$PROJECT \
       --stagingLocation=$STAGING \
       --runner=DataflowPipelineRunner \
       --streaming=true \
       --numWorkers=3 \
-      --zone=asia-northeast1-a"
+      --zone=asia-east1-a \
+      --sinkTopic=pickup-visualizer"
 
